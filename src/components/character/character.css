@@ -5,10 +5,11 @@
   grid-template-columns: auto 1fr;
   grid-gap: 1em;
   border-radius: 1em;
+  height: 13em;
 }
 
 .character-card__image {
-  width: 100%;
+  height: inherit;
   border-top-left-radius: 1em;
   border-bottom-left-radius: 1em;
 }
