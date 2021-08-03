@@ -8,7 +8,11 @@ const mainElement = createElement('main', {
     createElement('input', { placeholder: 'Search for a character' }),
     createElement('div', {
       className: 'characterContainer',
-      childElements: [createCharacterCard()],
+      childElements: [
+        createCharacterCard(),
+        createCharacterCard(),
+        createCharacterCard(),
+      ],
     }),
   ],
 });
