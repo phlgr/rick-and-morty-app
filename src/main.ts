@@ -1,14 +1,12 @@
 import './style.css';
+import { createElement } from './utils/createElement';
 
-const mainElement = document.createElement('main');
-
-const title = document.createElement('h1');
-title.innerText = 'Rick and Morty';
-
-const input = document.createElement('input');
-input.placeholder = 'Search for a character...';
-
-mainElement.append(title, input);
+const mainElement = createElement('main', {
+  childElements: [
+    createElement('h1', { innerText: 'Rick and Morty' }),
+    createElement('input', { placeholder: 'Search for a character' }),
+  ],
+});
 
 const app = document.querySelector<HTMLDivElement>('#app');
 
