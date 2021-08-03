@@ -1,10 +1,11 @@
 import './style.css';
+import { createElement } from './utils/createElement';
 
-const app = document.querySelector<HTMLDivElement>('#app');
+const mainElement = createElement('main', {
+  childElements: [
+    createElement('h1', { innerText: 'Rick and Morty' }),
+    createElement('input', { placeholder: 'Search for a character' }),
+  ],
+});
 
-if (app !== null) {
-  app.innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`;
-}
+document.querySelector<HTMLDivElement>('#app')?.append(mainElement);
