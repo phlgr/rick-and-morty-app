@@ -8,8 +8,4 @@ const mainElement = createElement('main', {
   ],
 });
 
-const app = document.querySelector<HTMLDivElement>('#app');
-
-if (app !== null) {
-  app.append(mainElement);
-}
+document.querySelector<HTMLDivElement>('#app')?.append(mainElement);
