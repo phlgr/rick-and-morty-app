@@ -1,4 +1,4 @@
-import './character.css';
+import styles from './character.module.css';
 import { createElement } from '../../utils/createElement';
 import type { Character } from '../../types';
 
@@ -10,14 +10,14 @@ export function createCharacterCard({
   origin,
 }: Character): HTMLElement {
   return createElement('div', {
-    className: 'character-card',
+    className: styles.card,
     childElements: [
       createElement('img', {
-        className: 'character-card__image',
+        className: styles.image,
         src: thumbnail,
       }),
       createElement('article', {
-        className: 'character-card__info',
+        className: styles.info,
         childElements: [
           createElement('h2', { innerText: name }),
           createElement('div', {
@@ -27,6 +27,7 @@ export function createCharacterCard({
                 innerText: `${
                   status === 'Alive' ? '💚' : '☠'
                 } ${status} - ${species}`,
+                className: status === 'Dead' ? styles.dead : '',
               }),
             ],
           }),
