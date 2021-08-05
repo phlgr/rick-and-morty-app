@@ -1,7 +1,10 @@
 import { createCharacterCard } from './components/character/character';
 import './style.css';
 import type { Character } from './types';
+import { getCharacters } from './utils/api';
 import { createElement } from './utils/createElement';
+
+getCharacters();
 
 const characters: Character[] = [
   {
